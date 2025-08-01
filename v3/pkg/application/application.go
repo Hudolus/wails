@@ -354,6 +354,9 @@ type App struct {
 
 	// singleInstanceManager handles single instance functionality
 	singleInstanceManager *singleInstanceManager
+
+	// ScreenCaptureManager handles screen capture functionality
+	ScreenCapturer *ScreenCaptureManager
 }
 
 func (a *App) Config() Options {
