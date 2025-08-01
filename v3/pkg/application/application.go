@@ -356,7 +356,7 @@ type App struct {
 	singleInstanceManager *singleInstanceManager
 
 	// ScreenCaptureManager handles screen capture functionality
-	ScreenCapturer *ScreenCaptureManager
+	ScreenCapturer *CaptureManager
 }
 
 func (a *App) Config() Options {
@@ -435,6 +435,7 @@ func (a *App) init() {
 	a.Screen = newScreenManager(a)
 	a.Clipboard = newClipboardManager(a)
 	a.SystemTray = newSystemTrayManager(a)
+	a.ScreenCapturer = newCaptureManager(a)
 }
 
 func (a *App) Capabilities() capabilities.Capabilities {
